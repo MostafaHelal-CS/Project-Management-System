@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+:root {
+    --bg-color:#111;
+    --input-color:#333;
+    --main--color:#4190e0;
+    --white-color:#FFF;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    background-color: var(--bg-color) !important;
+}
+
+::-webkit-scrollbar{
+    width: 0.5em;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main--color);
+}
+
+.dark-mode {
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    background-color: var(--input-color);
+    width: 4em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--main--color);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.dark-mode i{
+    font-size: 2em;
+    font-weight: 900;
+}
+
+@media (max-width:768px){
+    .dark-mode {
+        width: 3.5em;
+        height: 3.5em;
+        right: 1em;
+    }
+}
+.curd {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left:15px;
+    padding-right:15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Small Screen */
+@media (min-width:768px){
+    .curd {
+        width: 750px;
+    }
+}
+
+/* Medium Screen */
+@media (min-width:992px){
+    .curd {
+        width: 970px;
+    }
+}
+
+/* Large Screen */
+@media (min-width:1200px){
+    .curd {
+        width: 1170px;
+    }
+}
+
+.curd .heading {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: var(--main--color);
+    padding: 10px 0;
+}
+.curd .heading .title {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+
+@media (max-width:768px){
+    .curd .heading {
+        font-size: auto;
+    }
+    .curd .heading .title {
+        font-size: 1.2rem;
+    }
+}
+
+.curd .inputs {
+    width: 100%;
+}
+
+.curd .inputs input {
+    padding: 0.5em 1em;
+    border: none;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+    background-color: var(--input-color);
+    color: var(--white-color) ;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.curd .inputs input:focus {
+    outline: none;
+    border: 1px solid var(--main--color);
+}
+
+.curd .inputs input[name="title"] {
+    width: 100%;
+}
+
+.curd .inputs .totalPrice {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.curd .inputs .totalPrice input {
+    flex-basis: 24%;
+}
+
+.curd .inputs input[name="counter"]{
+    width: 100%;
+}
+
+.curd .inputs input[name="category"]{
+    width: 100%;
+}
+.curd .inputs small {
+    flex-basis: 24%;
+    height: 33.4px;
+    background-color: var(--input-color);
+    padding: 0.5em 1em ;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+    margin-top: -0.8em;
+    color: var(--main--color);
+    font-weight: bold;
+}
+
+.curd .inputs small::before {
+    content: "TOTAL = ";
+}
+
+#clearData {
+    width: 100%;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--main--color);
+    background-color: var(--input-color);
+}
+.curd .inputs button[name="create"]{
+    width: 100%;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--main--color);
+    background-color: var(--input-color);
+}
+
+.curd .inputs input[name="search"]{
+    width: 100%;
+}
+.curd .inputs .searchBy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.curd .inputs .searchBy button {
+    flex-basis: 49%;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--main--color);
+    background-color: var(--input-color);
+}
+
+@media (max-width:992px) {
+    .curd .inputs .totalPrice input {
+        flex-basis: 49%;
+    }
+    .curd .inputs small {
+        flex-basis: 49%;
+    }
+}
+
+@media (max-width:768px) {
+    .curd .inputs .totalPrice input {
+        flex-basis: 100%;
+    }
+    .curd .inputs .searchBy button {
+        font-size: 1em;
+        padding: 1em;
+    }
+
+    .curd .inputs small {
+        flex-basis: 100%;
+        margin-top: auto;
+    }
+}
+
+.outputs {
+    overflow-x: scroll;
+    color: var(--white-color);
+}
+
+table::-webkit-scrollbar {
+  display: none;
+}
+.outputs.bg-blue {
+    color: #333;
+}
+.outputs table{
+    width: 100%;
+    border: 2px solid var(--input-color);
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    border-collapse: collapse;
+    text-align: center;
+    scrollbar-width: none;
+}
+
+.outputs table thead tr th {
+    border: 2px solid var(--input-color) ;
+    padding: 0.5em;
+    color: #4190e0;
+    font-size: 1.5em;
+    background-color: var(--input-color);
+}
+
+.outputs table tbody tr td {
+    border: 2px solid var(--input-color);
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+.btn {
+    width: 100%;
+    height: 100%;
+    background: var(--input-color);
+    color: var(--main--color);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 0.5em;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    
+}
+
+.btn:hover{
+    background: var(--main--color);
+    color: var(--input-color);
+}
+
+.deleteValues {
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.updateValues{
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.bg-blue{
+    background-color: var(--white-color) !important;
+    color: var(--main--color);
+}
